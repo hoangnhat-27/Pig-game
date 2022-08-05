@@ -50,7 +50,7 @@ init();
 //Rolling dice functionality
 btnRoll.addEventListener('click', function () {
     let diceNumber = Math.floor(Math.random() * 6) + 1;
-    diceEl.src = `./dice-${diceNumber}.png`;
+    diceEl.src = `./img/dice-${diceNumber}.png`;
     diceEl.classList.remove('hidden');
     if (diceNumber !== 1) {
         //add to the current score
