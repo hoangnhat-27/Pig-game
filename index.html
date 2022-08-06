@@ -9,6 +9,15 @@
   </head>
   <body>
     <main>
+      <p class="help-icon">?</p>
+      <div class="help hidden">
+        <p class="close-btn">X</p>
+        <p class="help-content">
+          Rules: Use roll dice button to roll the dice, use hold button to hold
+          your score. If the number of the dice is 1, you loose all score in the
+          CURRENT. If the score >= 100, you win !
+        </p>
+      </div>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">43</p>
@@ -29,6 +38,7 @@
       <button class="btn btn--new">🔄 New Game</button>
       <button class="btn btn--roll">🎲 Roll Dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+      <div class="overlay hidden"></div>
     </main>
     <script src="./script.js"></script>
   </body>

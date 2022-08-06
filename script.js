@@ -14,6 +14,12 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
+//declaring help btn variables
+const helpIconEl = document.querySelector('.help-icon');
+const overlayEl = document.querySelector('.overlay');
+const helpModalEl = document.querySelector('.help');
+const closeIconEl = document.querySelector('.close-btn');
+
 let scores, currentScore, activePlayer;
 
 const init = function () {
@@ -43,6 +49,14 @@ const switchPlayer = function () {
     player0El.classList.toggle('player--active');
     player1El.classList.toggle('player--active');
 }
+const openCloseHelpBtn = () => {
+    helpModalEl.classList.toggle('hidden');
+    overlayEl.classList.toggle('hidden');
+}
+//help btn
+helpIconEl.addEventListener('click', openCloseHelpBtn)
+closeIconEl.addEventListener('click', openCloseHelpBtn)
+overlayEl.addEventListener('click', openCloseHelpBtn)
 
 //Initializing game
 init();
